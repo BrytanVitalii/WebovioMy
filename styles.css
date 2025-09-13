@@ -1,9 +1,13 @@
 body {
-    background-color: rgb(255, 0, 255);
+    background-color: rgb(255, 255, 255);
     margin: 0;
     padding: 0;
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
+/* --- HERO SECTION --- */
 .hero {
     background-color: rgb(219, 146, 146);
     background-size: cover;
@@ -14,6 +18,10 @@ body {
     aspect-ratio: 16/9;
 
     animation: imageslider 20s ease infinite; 
+    /*
+    -webkit-mask-image: linear-gradient(to bottom, black 98%, transparent 100%);
+    mask-image: linear-gradient(to bottom, black 98%, transparent 100%);
+    */
 }
 
 /* Nav Bar */
@@ -40,20 +48,23 @@ body {
     padding-left: 9.5vw;
     color: white;
     font-family: 'Poppins', sans-serif;
-    width: 32vw;
+    width: 40vw;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
 }
 
 .hero-eyebow {
     font-size: 0.9rem;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
 }
 
 .hero-heading {
     margin-block-start: 1rem;
-    font-size: clamp(1.5rem,3vw,4rem);
+    font-size: clamp(1.5rem, 4vw, 5.8rem);
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
 }
 
 .hero-subtitle {
-    font-size: 1rem;
+    font-size: 1.5rem;
     margin-block-end: 2.5rem;
 }
 
@@ -61,7 +72,7 @@ body {
     font-family: 'Poppins', sans-serif;
     font-style: normal;
     font-weight: 600;
-    font-size: 1rem;
+    font-size: 1.2rem;
     text-decoration-line: underline;
     color: #FFD723;
     padding-bottom: 3rem;
@@ -73,6 +84,15 @@ body {
   margin-right: 0.5em; /* spacing between icon and text */
 }
 
+
+/* --- WHAT WE DO SECTION --- */
+.what-we-do {
+    height: 100vh;
+    width: 100%;
+    background-color: white;
+}
+
+/* Media */
 @media (max-width:900px) {
     .hero-title {
         width: 80vw;
