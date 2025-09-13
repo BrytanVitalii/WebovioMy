@@ -1,0 +1,119 @@
+body {
+    background-color: rgb(255, 0, 255);
+    margin: 0;
+    padding: 0;
+}
+
+.hero {
+    background-color: rgb(219, 146, 146);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+
+    width: 100vw;
+    aspect-ratio: 16/9;
+
+    animation: imageslider 20s ease infinite; 
+}
+
+/* Nav Bar */
+.nav {
+    padding: 1em 9vw;
+    display: flex;
+    gap: 4rem;
+    height: 70px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    height: clamp(2rem, 7vw, 3rem);
+}
+
+.burger {
+    height: clamp(2rem, 7vw, 3rem);
+}
+
+/* Hero Title */
+.hero-title {
+    margin-top: 6vw;
+    padding-left: 9.5vw;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    width: 32vw;
+}
+
+.hero-eyebow {
+    font-size: 0.9rem;
+}
+
+.hero-heading {
+    margin-block-start: 1rem;
+    font-size: clamp(1.5rem,3vw,4rem);
+}
+
+.hero-subtitle {
+    font-size: 1rem;
+    margin-block-end: 2.5rem;
+}
+
+.getintouch {
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1rem;
+    text-decoration-line: underline;
+    color: #FFD723;
+    padding-bottom: 3rem;
+}
+
+.getintouch i {
+  font-family: "Font Awesome 7 Free"; /* FA 6 font family */
+  font-weight: 900; /* Needed for solid icons */
+  margin-right: 0.5em; /* spacing between icon and text */
+}
+
+@media (max-width:900px) {
+    .hero-title {
+        width: 80vw;
+        margin-top: 1vw;
+    }
+}
+
+@media (max-width:650px) {
+    .logo {
+        src: url("assets/webovio.svg");
+    }
+    .hero {
+        aspect-ratio: 1/1;
+    }
+    .nav {
+        padding: 0rem 3vw;
+    }
+    .hero-title {
+        width: 80vw;
+        margin-top: 1vw;
+        padding-left: 4vw;
+    }
+}
+
+
+
+/* Animations */
+@keyframes imageslider {
+    0% {
+        background-image: url('assets/background1.png');
+    }
+    40% {
+        background-image: url('assets/background1.png');
+    }
+    50% {
+        background-image: url('assets/background2.png');
+    }
+    90% {
+        background-image: url('assets/background2.png');
+    }
+    100% {
+        background-image: url('assets/background1.png');
+    }
+}
