@@ -259,7 +259,7 @@ body {
         justify-self: stretch;
         padding-bottom: 1rem;
         padding-top: 0;
-        box-shadow: 0px 30px 30px rgba(0,0,0,0.13);
+        box-shadow: 10px 30px 40px rgba(0,0,0,0.13);
     }
     .what-we-do__quote {
         padding: 6vw 4vw;
@@ -268,7 +268,7 @@ body {
         margin-block-end: 1%;
     }
     .clients-wrapper {
-        box-shadow: 20px 40px 50px #00000023;
+        box-shadow: 20px 20px 20px #00000013;
     }
 }
 
@@ -303,7 +303,7 @@ body {
         margin: 0 auto;
         display: block;
         z-index: auto;
-        box-shadow: 5px 10px 50px rgba(0,0,0,0.2);
+        box-shadow: 0px 10px 30px rgba(0,0,0,0.1);
     }
     .clients {
         flex-wrap: wrap;
