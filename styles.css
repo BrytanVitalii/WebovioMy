@@ -403,6 +403,11 @@ body {
 }
 
 /* Animations */
+
+/* 
+    Smooth transition between background images seems to not work FireFox :( 
+    Works in Chrome and Edge tho
+*/
 @keyframes imageslider {
     0% {
         background-image: url('assets/background1.webp');

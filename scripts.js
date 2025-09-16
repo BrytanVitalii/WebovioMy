@@ -5,7 +5,7 @@ const menu = document.querySelector('.burger-menu');
 
 let menuOpen = false;
 
-// Disable fullscreen burger menu on landscape and min-width:1024px
+// Disable fullscreen burger menu on landscape
 if (window.matchMedia('(orientation: landscape) and (min-width: 1024px)').matches) {
     const desktopLinks = document.querySelector('.burger-dektop__links');
     burgerImg.addEventListener('click', () => {
@@ -17,7 +17,7 @@ if (window.matchMedia('(orientation: landscape) and (min-width: 1024px)').matche
             desktopLinks.classList.remove('burger-dektop__links--visible');
             desktopLinks.classList.add('burger-dektop__links--hidden');
 
-            // Only hide after transition ends
+            // Hide after transition ends
             desktopLinks.addEventListener('transitionend', function handler() {
                 if (!menuOpen) {
                     desktopLinks.style.display = 'none';
@@ -30,7 +30,7 @@ if (window.matchMedia('(orientation: landscape) and (min-width: 1024px)').matche
             burgerImg.src = 'assets/close.svg';
             desktopLinks.style.display = 'flex';
 
-            // Force reflow to ensure transition (didn't knew this trick)
+            // Force reflow to ensure transition (didnt knew this trick)
             void desktopLinks.offsetWidth;
             desktopLinks.classList.remove('burger-dektop__links--hidden');
             desktopLinks.classList.add('burger-dektop__links--visible');
