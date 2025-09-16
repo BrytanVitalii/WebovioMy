@@ -10,17 +10,26 @@
     <link rel="preload" as="image" href="assets/background2.webp">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/ee91352a5d.js" crossorigin="anonymous"></script>
-
 </head>
 <body>
     <div class="hero">
-        <div class="nav">
-            <picture>
-                <source class=logo srcset="assets/webovio-compact.svg" media="(max-width: 370px)">
-                <img class=logo src="assets/webovio.svg" alt="Logo">
-            </picture>
-            <div>
-                <img class="burger" src="assets/burger.svg" >
+        <div class="nav-wrapper">
+            <div class="nav">
+                <picture>
+                    <source class=logo srcset="assets/webovio-compact.svg" media="(max-width: 370px)">
+                    <img class=logo src="assets/webovio.svg" alt="Logo">
+                </picture>
+                <div class="burger-wrapper">
+                    <div class="burger-dektop__links">
+                        <a class="burger-dektop__link" href="#">Home</a>
+                        <a class="burger-dektop__link" href="#">About Us</a>
+                        <a class="burger-dektop__link" href="#">Services</a>
+                        <a class="burger-dektop__link" href="#">Portfolio</a>
+                        <a class="burger-dektop__link" href="#">Blog</a>
+                        <a class="burger-dektop__link" href="#">Contact</a>
+                    </div>
+                    <img class="burger" src="assets/burger.svg" >
+                </div>
             </div>
         </div>
         <div class="hero-title">
@@ -78,4 +87,15 @@
             </div>
         </div>
     </div>
+    <div class="burger-menu">
+        <ul class="burger-menu__list">
+            <li class="burger-menu__item">Home</li>
+            <li class="burger-menu__item">About Us</li>
+            <li class="burger-menu__item">Services</li>
+            <li class="burger-menu__item">Portfolio</li>
+            <li class="burger-menu__item">Blog</li>
+            <li class="burger-menu__item">Contact</li>
+        </ul>
+    </div>
+    <script src="scripts.js"></script>
 </body>

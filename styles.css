@@ -2,9 +2,8 @@ body {
     background-color: rgb(255, 255, 255);
     margin: 0;
     padding: 0;
-    scroll-snap-type: y mandatory;
-    scroll-behavior: smooth;
     overflow-x: hidden;
+    font-family: 'Poppins', sans-serif;
 }
 
 /* --- HERO SECTION --- */
@@ -26,18 +25,22 @@ body {
 
 /* Nav Bar */
 .nav {
+    position: relative;
     padding: 1em 10vw;
     display: flex;
     gap: 4rem;
     height: 70px;
     align-items: center;
     justify-content: space-between;
+    z-index: 999;
 }
 
 .logo {
     height: clamp(2rem, 7vw, 3rem);
 }
-
+.burger-wrapper {
+    margin-right: 1rem;
+}
 .burger {
     height: clamp(2rem, 7vw, 3rem);
 }
@@ -170,7 +173,7 @@ body {
 }
 
 .what-we-do__subtitle {
-    font-size: clamp(1.1rem, 1.2vw, 3rem);
+    font-size: clamp(1.1rem, 1.2vw, 3.5rem);
     margin-block-end: 6vw;
     color: #21384299;
 }
@@ -197,7 +200,7 @@ body {
 }
 
 .what-we-do__quote-text {
-    font-size: clamp(1.1rem, 1.7vw, 3rem);
+    font-size: clamp(1.1rem, 1.7vw, 5rem);
     font-style: italic;
     color: #4D533C;
 }
@@ -212,7 +215,7 @@ body {
 
 .what-we-do__quote-founder img {
     border-radius: 8.3vw;
-    height: max(3rem, 8.3vw);
+    height: clamp(3rem, 8.3vw, 15rem);
 }
 
 .what-we-do__quote-founder-name {
@@ -227,8 +230,57 @@ body {
     margin-block-start: 0;
 }
 
+/* --- BURGER MENU --- */
+.burger-menu {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 100vw;
+    width: 100vw;
+    height: 100vh;
+    height: 100dvh;
+    background-color: #303030ee;
+    color: #ffd723ee;
+    z-index: 998;
+}
+
+.burger-menu__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-top: 90px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    font-weight: 900;
+    text-shadow: 2px 5px 5px rgba(0,0,0,0.3);
+    font-size: clamp(0.9rem, 6vh, 10dvh);
+    font-size: clamp(0.9rem, 6dvh, 10dvh);
+    gap: 3vh;
+    gap: 3dvh;
+}
+
+.burger-menu__slidein {
+    animation: slidein 0.5s ease forwards;
+}
+
+.burger-menu__slideout {
+    animation: slideout 0.5s ease forwards;
+}
+
+.disable-scroll {
+    overflow: hidden;
+}
+
+.burger-dektop__links {
+    display: none;
+}
+
 /* Media */
-@media (max-width:950px) {
+@media (max-width:1024px) {
     .hero-title {
         width: 80vw;
         margin-top: 1vw;
@@ -313,7 +365,42 @@ body {
     }
 }
 
+@media (orientation: landscape) and (min-width:1024px) {
+    .desktop-burger {
 
+    }
+    .burger-wrapper {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: max(2rem, 3vw);
+    }
+
+    .burger-dektop__links {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: max(0.5rem, 1.5vw);
+        font-size: min(1.15vw, 1.5rem);
+        font-weight: 600;
+        transition: opacity 0.4s ease;
+        opacity: 0;
+    }
+
+    .burger-dektop__links--hidden {
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    .burger-dektop__links--visible {
+        opacity: 1;
+    }
+
+    .burger-dektop__links a {
+        color: white;
+        text-decoration: none;
+    }
+}
 
 /* Animations */
 @keyframes imageslider {
@@ -333,6 +420,17 @@ body {
         background-image: url('assets/background1.webp');
     }
 }
+
+@keyframes slidein {
+    from {left: 100vw; }
+    to {left: 0; }
+}
+
+@keyframes slideout {
+    from {left: 0; }
+    to {left: 100vw; }
+}
+
 
 @keyframes headerfadein {
     from {opacity: 0; transform: translate(-1vw, 0px);}
