@@ -28,7 +28,6 @@ body {
     position: relative;
     padding: 1em 10vw;
     display: flex;
-    gap: 4rem;
     height: 70px;
     align-items: center;
     justify-content: space-between;
@@ -366,9 +365,6 @@ body {
 }
 
 @media (orientation: landscape) and (min-width:1024px) {
-    .desktop-burger {
-
-    }
     .burger-wrapper {
         display: flex;
         flex-direction: row;
